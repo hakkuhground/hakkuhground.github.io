@@ -46,7 +46,7 @@
       margin-bottom: 40px;
     }
 
-    /* FLICKER ANIMATION */
+    /* FLICKER */
     .motto {
       margin: 40px 0;
       font-size: 16px;
@@ -60,12 +60,26 @@
       20%, 24%, 55% { opacity: 0.2; }
     }
 
-    /* PLAYER / PLACEHOLDER */
+    /* RELEASE TAG */
+    .release-tag {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #ff0033;
+      margin-bottom: 10px;
+    }
+
+    /* PLAYER */
     .player {
-      margin-top: 40px;
+      margin-top: 20px;
       border: 1px solid #222;
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    .player:hover {
+      border-color: #ff0033;
+      box-shadow: 0 0 20px rgba(255,0,50,0.2);
     }
 
     iframe {
@@ -75,10 +89,16 @@
       border-radius: 10px;
     }
 
-    .placeholder {
-      color: #666;
+    .track-title {
+      margin-top: 15px;
       font-size: 14px;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      color: #ccc;
+      transition: 0.2s;
+    }
+
+    .player:hover + .track-title {
+      color: #fff;
     }
 
     /* LINKS */
@@ -99,7 +119,6 @@
       transition: 0.2s;
     }
 
-    /* GLITCH HOVER */
     .link-item::before {
       content: "";
       position: absolute;
@@ -151,18 +170,22 @@
     NO ZAAG KICKS
   </div>
 
-  <!-- PLAYER / EMPTY STATE -->
-  <div class="player">
-    <div class="placeholder">
-      NO RELEASES YET<br><br>
-      FIRST DROP COMING SOON
-    </div>
+  <div class="release-tag">
+    DEBUT RELEASE
   </div>
+
+  <div class="player">
+    <iframe 
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/hakkuhground/thedark_millennium&color=%23000000&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true">
+    </iframe>
+  </div>
+
+  <p class="track-title">THE DARK MILLENNIUM</p>
 
   <!-- LINKS -->
   <div class="links">
 
-    <a href="https://soundcloud.com/hakkuhground" target="_blank" class="link-item">
+    <a href="https://soundcloud.com/hakkunground" target="_blank" class="link-item">
       SOUNDCLOUD
     </a>
 
